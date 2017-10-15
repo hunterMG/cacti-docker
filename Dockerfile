@@ -1,7 +1,7 @@
 #name of container: cacti
-MAINTAINER Guang Yan "vyg178@163.com"
 
 FROM ubuntu:16.04
+LABEL maintainer="vyg178@163.com"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
