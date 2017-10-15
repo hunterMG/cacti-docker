@@ -1,6 +1,6 @@
 #name of container: cacti
 
-FROM ubuntu:16.04
+FROM quantumobject/docker-baseimage:15.10
 LABEL maintainer="vyg178@163.com"
 
 ENV DEBIAN_FRONTEND=noninteractive
