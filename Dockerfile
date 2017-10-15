@@ -10,8 +10,7 @@ RUN apt-get update && apt-get install -yq cacti \
                                           cacti-spine \
                                           python-netsnmp \
                                           libnet-snmp-perl \
-                                          snmp-mibs-downloader \
-                   
+                                          snmp-mibs-downloader
 
 EXPOSE 80 443 161
 
