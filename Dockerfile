@@ -1,5 +1,9 @@
 #name of container: cacti
+MAINTAINER Guang Yan "vyg178@163.com"
+
 FROM ubuntu:16.04
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -yq cacti \
                                           snmpd \
@@ -15,3 +19,4 @@ RUN apt-get update && apt-get install -yq cacti \
 
 EXPOSE 80 443 161
 
+CMD ["/sbin/my_init"]
