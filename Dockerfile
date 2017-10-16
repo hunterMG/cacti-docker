@@ -3,8 +3,8 @@
 FROM quantumobject/docker-baseimage:15.10
 LABEL maintainer="vyg178@163.com"
 
-RUN echo "http://cn.archive.ubuntu.com/ubuntu/ `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted " >> /etc/apt/sources.list && \
-    echo "http://cn.archive.ubuntu.com/ubuntu/ `cat /etc/container_environment/DISTRIB_CODENAME` multiverse " >> /etc/apt/sources.list
+RUN echo "http://mirrors.163.com/ubuntu/ `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted " >> /etc/apt/sources.list && \
+    echo "http://mirrors.163.com/ubuntu/ `cat /etc/container_environment/DISTRIB_CODENAME` multiverse " >> /etc/apt/sources.list
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -yq cacti \
                                           snmpd \
                                           cacti-spine \
