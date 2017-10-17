@@ -12,7 +12,7 @@ RUN \
         ntp bison php-cli php-mysql php-common php-mbstring php-snmp curl wget \
         php-gd openssl openldap mod_ssl php-pear net-snmp-libs php-pdo && \  
 
-    wget -P /tmp https://www.cacti.net/downloads/cacti-1.1.24.tar.gz && \
+    wget -P /tmp https://www.cacti.net/downloads/cacti-1.1.26.tar.gz && \
     tar -xf /tmp/cacti-1*.tar.gz -C /tmp && \
     mv /tmp/cacti-1*/ /cacti/
 
@@ -22,13 +22,13 @@ RUN \
         autoconf automake gcc gzip help2man libtool make net-snmp-devel \
         m4 libmysqlclient-devel libmysqlclient openssl-devel dos2unix mariadb-devel && \
 
-    wget -P /tmp https://www.cacti.net/downloads/spine/cacti-spine-1.1.24.tar.gz && \
+    wget -P /tmp https://www.cacti.net/downloads/spine/cacti-spine-1.1.26.tar.gz && \
     tar -xf /tmp/cacti-spine-*.tar.gz -C /tmp && \
     cd /tmp/cacti-spine-* && \
     ./configure --prefix=/spine && make && make install && \
     chown root:root /spine/bin/spine && \
     chmod +s /spine/bin/spine && \
-    
+
 ## --- CLEANUP ---
     rm -rf /tmp/*  && \
     yum clean all

@@ -15,7 +15,7 @@ services:
       - INITIALIZE_DB=1
       - TZ=Asia/Shanghai
     volumes:
-      - ./cacti:/cacti
+      - ../cacti:/cacti
       - /docker/backups:/backups
     links:
       - db
